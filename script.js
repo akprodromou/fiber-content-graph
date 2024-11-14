@@ -4,7 +4,7 @@ var width = 1080,
 // Load csv data
 d3.csv('food_composition_grouped_cleaned.csv')
   .then(function(data) {
-    nodes = data.map((d, index) => { // Add 'index' as the second parameter
+    nodes = data.map((d, index) => { 
       return {
         id: `node_${index}`, // Add a unique ID based on index
         ...d,
@@ -46,7 +46,7 @@ const mucosaNum = 40;
 const mucosaArcs = Array.from({ length: mucosaNum }, () => ({}));
 
 // Create our gradient
-//Append a defs (for definition) element to the SVG
+// Append a defs (for definition) element to the SVG
 var defs = svg.append("defs");
 
 // Set up mucosa gradient
@@ -321,7 +321,7 @@ function generateXaxis() {
   .attr("class", "axisTitleText")
   .append("textPath")  // Attach the text to follow the path
   .attr("href", "#xAxisPath")  // Reference the path by its ID 
-  .attr("startOffset", "75%")  // Adjust the offset along the path
+  .attr("startOffset", "75%")  // Offset along the path
   .append("tspan")
   .attr("dy", "-32.5") // Shift the text downwards
   .attr("text-anchor", "middle")
