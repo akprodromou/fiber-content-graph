@@ -340,7 +340,7 @@ function generateXaxis() {
     .enter()
     .append("g")
     .each(function(d) {
-      // Convert angle to radians once
+      // Convert angle to radians 
       const angle = d.angle * Math.PI / 180;
       const cosAngle = Math.cos(angle);
       const sinAngle = Math.sin(angle);
@@ -401,7 +401,6 @@ function generateYaxis() {
         .append("line")
         .attr("x1", - 10)
         .attr("y1", d.radius)
-        // sugarToRadius(node.sugar_group_average) * Math.sin(angle);
         .attr("x2", - 20) // Length of tick line
         .attr("y2", d.radius)
         .attr("stroke", "white")
@@ -433,7 +432,6 @@ function generateYaxis() {
     yAxisGroup.append("line")    
     .attr("x1", - 10)
     .attr("y1", radius)
-    // sugarToRadius(node.sugar_group_average) * Math.sin(angle);
     .attr("x2", - 10) // Length of tick line
     .attr("y2", sugarToRadius(d3.max(nodes, d => d.sugar_group_average)))
     .attr("stroke", "white")
@@ -449,17 +447,6 @@ svg
   .attr("x", `${width - 282.5}`) // Set horizontal position
   .attr("y", 65) // Set vertical position
   .attr("fill", "white");
-
-// Create a subtitle element and append it to the SVG
-// svg
-//   .append("text")
-//   .text("Balancing fiber and sugar for better health")
-//   .attr("class","subtitle")
-//   .attr("text-anchor", "end") 
-//   .attr("x", `${width + 37.5}`) // Set horizontal position
-//   .attr("y", 100) // Set vertical position
-//   .attr("fill", "white");
- 
 
 // Append description below the title
 svg.append("foreignObject")
@@ -528,7 +515,7 @@ annotationGroup.append("foreignObject")
   .attr("y", annotationBoxY)
   .attr("class", "annotation-foreignObject")
   .style("overflow", "visible")
-  .append("xhtml:div") // XHTML namespace is required here
+  .append("xhtml:div") 
   .style("background", "rgba(255, 255, 255, 0.6)") // Semi-transparent background
   .style("padding", "15px")
   .style("border-radius", "4px")
