@@ -1,4 +1,8 @@
-
+body {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; 
+}
 
 svg {
   background-color: rgb(0, 0, 0);
