@@ -25,6 +25,6 @@ This project uses D3.js to create a dynamic and interactive representation of ho
 - SVG graphics for visual storytelling
 - Color-coded gradients based on nutritional values
 
-Built With HTML, CSS, JavaScript (D3.js)
+Built With HTML, CSS and JavaScript (D3.js)
 
 ---
