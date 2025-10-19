@@ -2,7 +2,7 @@ var width = 1080,
   height = 1080;
 
 // Load csv data
-d3.csv('food_composition_grouped_cleaned.csv')
+d3.csv('data/food_composition_grouped_cleaned.')
   .then(function(data) {
     nodes = data.map((d, index) => { 
       return {
@@ -548,3 +548,4 @@ d3.xml("gutGraphic.svg").then(data => {
 }).catch(error => console.error("Error loading SVG:", error));
   
   
+
